@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hys_scraper"
+version = "0.1.3"
+description = "Scrape feedback and statistics from the European Commission's 'Have your Say' plattform."
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "requests",
+    "pandas",
+]
+requires-python = ">=3.6"
+
+
+[project.scripts]
+realpython = "hys_scraper.__main__:main"
