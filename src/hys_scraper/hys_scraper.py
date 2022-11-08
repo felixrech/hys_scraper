@@ -206,7 +206,7 @@ class HYS_Scraper:
 
         # Drop some unnecessary columns
         df = df.drop(
-            columns=["status", "isMyFeedback", "historyEventOccurs", "_links"],
+            columns=["isMyFeedback", "historyEventOccurs", "_links"],
             errors="ignore",
         )
 
@@ -259,10 +259,7 @@ class HYS_Scraper:
             DataFrame containing the filenames of the downloaded attachments (relative
             to target_dir).
         """
-        # Create a temporary download location
-        if not os.path.isdir("/tmp/hys_scraper"):
-            os.mkdir("/tmp/hys_scraper")
-        tmp_location = "/tmp/hys_scraper/tmp.pdf"
+        tmp_location = "./.tmp.pdf"
 
         # Get a id, attachment dataframe
         df = df[["id", "attachments"]].copy()
