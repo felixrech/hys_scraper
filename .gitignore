@@ -1,2 +1,5 @@
+venv/
 dist/
 src/hys_scraper.egg-info/
+
+project_notes.txt

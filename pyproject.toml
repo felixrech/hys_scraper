@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hys_scraper"
-version = "0.1.32"
+version = "0.1.33"
 description = "Scrape feedback and statistics from the European Commission's 'Have your Say' plattform."
 readme = "README.md"
 classifiers = [

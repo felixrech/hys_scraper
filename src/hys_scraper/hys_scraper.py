@@ -115,7 +115,7 @@ class HYS_Scraper:
         """
         url = (
             self.base_url
-            + f"brpapi/shortTitleByPublicationId?publicationId={self.publication_id}"
+            + f"api/shortTitleByPublicationId?publicationId={self.publication_id}"
         )
 
         r = self._get(url)
@@ -148,7 +148,7 @@ class HYS_Scraper:
         dict
             Parsed JSON return value.
         """
-        url = self.base_url + f"brpapi/allFeedback?publicationId={self.publication_id}"
+        url = self.base_url + f"api/allFeedback?publicationId={self.publication_id}"
         url += f"&page={page}"
         url += f"&size={size}" if size is not None else ""
 
